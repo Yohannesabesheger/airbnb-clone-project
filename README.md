@@ -6,12 +6,6 @@ This is a full-stack clone of the popular accommodation booking platform **AirBn
 
 ---
 
-## About the Project
-
-The **Airbnb Clone Project** is a comprehensive, real-world application designed to simulate the development of a robust booking platform like Airbnb. It involves a deep dive into full-stack development, focusing on backend systems, database design, API development, and application security. This project enables learners to understand complex architectures, workflows, and collaborative team dynamics while building a scalable web application.
-
----
-
 ## UI/UX Design Planning
 
 ### Design Goals
@@ -30,11 +24,11 @@ The **Airbnb Clone Project** is a comprehensive, real-world application designed
 
 ### Primary Pages
 
-| Page                  | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| Property Listing View  | Grid display of available properties with filtering options                 |
-| Listing Detailed View  | Detailed property information, image carousel, and booking form             |
-| Simple Checkout View   | Streamlined checkout with payment and booking confirmation                  |
+| Page                 | Description                                                           |
+|----------------------|-----------------------------------------------------------------------|
+| Property Listing View | Grid display of available properties with filtering options           |
+| Listing Detailed View | Detailed property information, image carousel, and booking form       |
+| Simple Checkout View  | Streamlined checkout with payment and booking confirmation            |
 
 ### Importance of User-Friendly Design
 
@@ -99,9 +93,26 @@ Identifying design properties (like typography and color styles) in a mockup ens
   - Social media links
   - Copyright
 
+Each UI component will be reusable and follow the same design principles to maintain consistency across the entire application.
+
+
+
+## Team Roles
+
+| Role               | Responsibilities                                                                 |
+|--------------------|-----------------------------------------------------------------------------------|
+| Project Manager     | Oversees timeline, coordinates the team, manages deliverables                   |
+| Frontend Developers | Build UI components and ensure responsive, consistent design                    |
+| Backend Developers  | Develop APIs, manage the database, implement server-side logic                   |
+| Designers           | Create UI mockups, define design systems, and ensure good UX                    |
+| QA/Testers          | Write test cases, perform thorough testing, and report bugs                     |
+| DevOps Engineers    | Manage CI/CD pipelines, deployments, and server infrastructure                  |
+| Product Owner       | Define and prioritize features, represent end-users and stakeholders            |
+| Scrum Master        | Facilitate agile processes, resolve blockers, and organize sprint activities    |
+
 ---
 
-## Technology Stack Overview
+## Technology Stack
 
 | Technology     | Purpose                                                              |
 |----------------|----------------------------------------------------------------------|
@@ -128,28 +139,40 @@ Identifying design properties (like typography and color styles) in a mockup ens
 ## Feature Breakdown
 
 - **User Management**  
-  Enables users to register, log in, and manage profiles securely.
-
+  Enables users to register, log in, and manage profiles securely.  
 - **Property Management**  
-  Allows users to list properties with images, descriptions, and availability.
-
+  Allows users to list properties with images, descriptions, and availability.  
 - **Booking System**  
-  Users can book properties, view availability, and manage their bookings.
-
+  Users can book properties, view availability, and manage their bookings.  
 - **Review System**  
-  Enables users to leave reviews after a stay, improving credibility.
-
+  Enables users to leave reviews after a stay, improving credibility.  
 - **Payment Integration**  
-  Secure payment processing and confirmation for each booking.
+  Secure payment processing and confirmation for each booking.  
 
 ---
+## API Security
+
+| Security Measure         | Explanation                                                                                   |
+|--------------------------|-----------------------------------------------------------------------------------------------|
+| **Authentication**       | Ensures that only registered users can access protected routes. Commonly implemented via JWT or OAuth2. |
+| **Authorization**        | Determines user permissions (e.g., only property owners can edit listings). Prevents unauthorized actions. |
+| **Input Validation**     | Sanitizes incoming data to prevent SQL injection, XSS, and other code injection attacks.      |
+| **Rate Limiting**        | Protects APIs from abuse and denial-of-service (DoS) attacks by limiting repeated requests.   |
+| **HTTPS Encryption**     | Secures data in transit between the frontend and backend using TLS.                           |
+| **Error Handling**       | Avoids leaking sensitive system information through clear and generic error messages.         |
+
 
 ## CI/CD Pipeline
 
-**Overview**:  
+**Objective**: Understand how CI/CD pipelines contribute to the development process.
+
+**Overview**:
 CI/CD pipelines automate the process of testing, building, and deploying code. This ensures rapid delivery with minimal human error, maintains consistent environments, and improves overall code quality.
 
 **Tools Used**:
 - **GitHub Actions**: For automated testing and deployment triggers.
 - **Docker**: Ensures uniform environments across dev, staging, and production.
 - **Heroku/AWS**: Deployment platforms for staging and production environments.
+
+---
+
