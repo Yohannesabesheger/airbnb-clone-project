@@ -58,7 +58,7 @@ Identifying design properties (like typography and color styles) in a mockup ens
 
 ---
 
-## Project Roles and Responsibilities
+## Project Roles and Responsibilities.
 
 | Role               | Responsibilities                                                                 |
 |--------------------|-----------------------------------------------------------------------------------|
