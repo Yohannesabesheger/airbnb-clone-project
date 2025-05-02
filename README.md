@@ -6,6 +6,12 @@ This is a full-stack clone of the popular accommodation booking platform **AirBn
 
 ---
 
+## About the Project
+
+The **Airbnb Clone Project** is a comprehensive, real-world application designed to simulate the development of a robust booking platform like Airbnb. It involves a deep dive into full-stack development, focusing on backend systems, database design, API development, and application security. This project enables learners to understand complex architectures, workflows, and collaborative team dynamics while building a scalable web application.
+
+---
+
 ## UI/UX Design Planning
 
 ### Design Goals
@@ -24,11 +30,11 @@ This is a full-stack clone of the popular accommodation booking platform **AirBn
 
 ### Primary Pages
 
-| Page                 | Description                                                           |
-|----------------------|-----------------------------------------------------------------------|
-| Property Listing View | Grid display of available properties with filtering options           |
-| Listing Detailed View | Detailed property information, image carousel, and booking form       |
-| Simple Checkout View  | Streamlined checkout with payment and booking confirmation            |
+| Page                  | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| Property Listing View  | Grid display of available properties with filtering options                 |
+| Listing Detailed View  | Detailed property information, image carousel, and booking form             |
+| Simple Checkout View   | Streamlined checkout with payment and booking confirmation                  |
 
 ### Importance of User-Friendly Design
 
@@ -93,4 +99,57 @@ Identifying design properties (like typography and color styles) in a mockup ens
   - Social media links
   - Copyright
 
-Each UI component will be reusable and follow the same design principles to maintain consistency across the entire application.
+---
+
+## Technology Stack Overview
+
+| Technology     | Purpose                                                              |
+|----------------|----------------------------------------------------------------------|
+| Django         | Web framework used for building RESTful APIs and backend logic       |
+| MySQL          | Relational database to store application data securely               |
+| GraphQL        | API query language for efficient data fetching                       |
+| Docker         | Containerization tool for environment consistency and deployment     |
+| GitHub Actions | CI/CD automation for testing and deployment pipelines                |
+
+---
+
+## Database Design
+
+| Entity     | Fields                                               | Relationships                                     |
+|------------|------------------------------------------------------|---------------------------------------------------|
+| Users      | id, name, email, password_hash                       | A user can list multiple properties               |
+| Properties | id, owner_id, title, description, location           | Each property belongs to one user                 |
+| Bookings   | id, property_id, user_id, checkin_date, checkout_date| A booking is linked to a property and a user      |
+| Reviews    | id, booking_id, rating, comment                      | Each review is associated with a completed booking|
+| Payments   | id, booking_id, amount, payment_status               | Payments are tied to a booking                    |
+
+---
+
+## Feature Breakdown
+
+- **User Management**  
+  Enables users to register, log in, and manage profiles securely.
+
+- **Property Management**  
+  Allows users to list properties with images, descriptions, and availability.
+
+- **Booking System**  
+  Users can book properties, view availability, and manage their bookings.
+
+- **Review System**  
+  Enables users to leave reviews after a stay, improving credibility.
+
+- **Payment Integration**  
+  Secure payment processing and confirmation for each booking.
+
+---
+
+## CI/CD Pipeline
+
+**Overview**:  
+CI/CD pipelines automate the process of testing, building, and deploying code. This ensures rapid delivery with minimal human error, maintains consistent environments, and improves overall code quality.
+
+**Tools Used**:
+- **GitHub Actions**: For automated testing and deployment triggers.
+- **Docker**: Ensures uniform environments across dev, staging, and production.
+- **Heroku/AWS**: Deployment platforms for staging and production environments.
